@@ -13,14 +13,15 @@
 # limitations under the License.
 """Inference-only Gemma model implementation."""
 
-import re
 import torch
 from torch import nn
 import torch.nn.functional as F
 from typing import Any, List, Optional, Sequence, Tuple, Union
+from .gemma import config as gemma_config, tokenizer
 
-from gemma import config as gemma_config
-from gemma import tokenizer
+
+# from gemma import config as gemma_config
+# from .gemma import tokenizer
 
 
 class Sampler(nn.Module):
