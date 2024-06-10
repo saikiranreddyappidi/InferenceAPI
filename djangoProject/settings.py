@@ -41,7 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    "api.apps.ApiConfig"
+    "api.apps.ApiConfig",
+    'rest_framework',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -53,7 +55,12 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
+
+CORS_ORIGIN_WHITELIST = (
+    'http://localhost:5173',
+)
 
 ROOT_URLCONF = 'djangoProject.urls'
 

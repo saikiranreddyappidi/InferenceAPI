@@ -1,0 +1,90 @@
+.credit-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.credit-form form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.credit-form label {
+    margin-bottom: 15px;
+    margin-top: 5px;
+    padding: 5px;
+}
+
+.credit-form input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #333;
+}
+
+.eth-output {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 70px;
+    padding: 15px 70px;
+    border-radius: 5px;
+    background: #333;
+    text-decoration-color: #e5e5e5;
+    color: #e5e5e5;
+}
+
+.eth-exist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2px 20px;
+    padding: 15px 70px;
+    border-radius: 5px;
+    background: #333;
+    text-decoration-color: #e5e5e5;
+    color: #e5e5e5;
+}
+
+.div-logout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.logout {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /*margin: 50px 70px;*/
+    padding: 15px 70px;
+    border-radius: 5px;
+    background: #333;
+    text-decoration-color: #e5e5e5;
+    color: #e5e5e5;
+}
+
+/* For Chrome and Safari */
+::-webkit-scrollbar {
+    width: 10px; /* Adjust scrollbar width */
+    display: none;
+}
+
+::-webkit-scrollbar-track {
+    background: inherit; /* Make the track (the background) inherit from body */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; /* Make the handle (the moving part) a darker color */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Even darker when hovering */
+}

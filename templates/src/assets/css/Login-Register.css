@@ -1,0 +1,132 @@
+/* Login-Register.css */
+
+*, *:before, *:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body, html {
+    height: 100%; /* Ensure full height */
+    background-color: #1a1a1e;
+}
+.background {
+    width: auto; /* Full viewport width */
+    height: auto; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Needed for absolute positioning of children */
+    padding: 20px 40px;
+}
+
+form {
+    height: auto;
+    width: 400px;
+    background-color: rgba(255,255,255,0.13);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+    position: relative; /* Correct centering inside .background */
+}
+
+form * {
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+form h3 {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+}
+label {
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+}
+input {
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+}
+::placeholder {
+    color: #e5e5e5;
+}
+button {
+    margin-top: 28px;
+    width: 100%;
+    background-color: #ffffff;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+    .background {
+        padding: 20px; /* Add some padding on smaller screens */
+    }
+    .shape {
+        width: 150px; /* Smaller shapes on smaller screens */
+        height: 150px;
+    }
+    .shape:first-child {
+        left: -50px; /* Adjust position to fit better on small screens */
+        top: -50px;
+    }
+    .shape:last-child {
+        right: 20px; /* Adjust position to better fit on small screens */
+        bottom: -50px;
+    }
+    form {
+        width: 100%; /* Make form take full width */
+        height: auto; /* Make form height automatic */
+        padding: 30px 20px; /* Reduce padding */
+        box-shadow: 0 0 20px rgba(8,7,16,0.6); /* Less intense shadow */
+    }
+    form h3 {
+        font-size: 24px; /* Smaller font size for headings */
+    }
+    label {
+        margin-top: 20px; /* Less margin */
+        font-size: 14px; /* Smaller font size for labels */
+    }
+    input, button {
+        height: 40px; /* Smaller input fields and button */
+        font-size: 16px; /* Smaller font size for inputs and button */
+    }
+    button {
+        padding: 12px 0; /* Less padding in buttons */
+    }
+}
+
+/* For Chrome and Safari */
+::-webkit-scrollbar {
+    width: 10px; /* Adjust scrollbar width */
+    display: none;
+}
+
+::-webkit-scrollbar-track {
+    background: inherit; /* Make the track (the background) inherit from body */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; /* Make the handle (the moving part) a darker color */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Even darker when hovering */
+}
