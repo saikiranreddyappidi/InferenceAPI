@@ -4,48 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="24a912d5-d218-4e67-94a9-76466e0f5b9d" name="Changes" comment="creating a chatbot">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/.eslintrc.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/public/vite.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/src/App.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/src/assets/css/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/src/assets/css/Home.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/src/assets/css/Login-Register.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/src/assets/css/Navbar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/src/assets/css/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/src/assets/images/react.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/src/components/Authentication/AuthContext.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/src/components/Authentication/ProtectedRoute.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/src/components/Home.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/src/components/Login-Register.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/src/components/Login.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/src/components/Navbar.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/src/components/Register.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/src/main.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/vite.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/djangoProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/djangoProject.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="24a912d5-d218-4e67-94a9-76466e0f5b9d" name="Changes" comment="Update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangoProject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoProject/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangoProject/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoProject/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/chat.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/contextForm.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/signup.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/src/components/Authentication/AuthContext.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/templates/src/components/Authentication/AuthContext.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/src/components/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/templates/src/components/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/vite.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +114,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Django Server.djangoProject">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="djangoProject" type="Python.DjangoServer" factoryName="Django server">
       <module name="djangoProject" />
       <option name="ENV_FILES" value="" />
@@ -187,7 +150,8 @@
       <node-interpreter value="project" />
       <envs />
       <method v="2">
-        <option name="LaunchBrowser.Before.Run" url="http://localhost:5173/" />
+        <option name="LaunchBrowser.Before.Run" browser="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" url="http://localhost:5173/" />
+        <option name="LaunchBrowser.Before.Run" browser="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" url="http://192.168.0.142:5173/" />
       </method>
     </configuration>
     <list>
@@ -232,7 +196,8 @@
       <workItem from="1718007411927" duration="13000" />
       <workItem from="1718007578723" duration="106000" />
       <workItem from="1718007838147" duration="6151000" />
-      <workItem from="1718015421859" duration="3156000" />
+      <workItem from="1718015421859" duration="3672000" />
+      <workItem from="1718034144250" duration="3128000" />
     </task>
     <task id="LOCAL-00002" summary="creating a chatbot">
       <option name="closed" value="true" />
@@ -242,7 +207,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717427097909</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Update">
+      <option name="closed" value="true" />
+      <created>1718030534241</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1718030534241</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,6 +236,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="changed cred" />
     <MESSAGE value="creating a chatbot" />
-    <option name="LAST_COMMIT_MESSAGE" value="creating a chatbot" />
+    <MESSAGE value="Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update" />
   </component>
 </project>
