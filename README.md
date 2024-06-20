@@ -1,1 +1,1 @@
-![Build](https://github.com/saikiranreddyappidi/InferenceAPI/.github/workflows/django.yml/badge.svg)
+![Build](https://github.com/saikiranreddyappidi/InferenceAPI/actions/workflows/django.yml/badge.svg)
