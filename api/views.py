@@ -16,7 +16,7 @@ from .models import Chat_Session, Chat_Messages
 from hashlib import sha256
 from asgiref.sync import sync_to_async, async_to_sync
 
-summarizer = Summarizer()  # done
+summarizer = Summarizer()
 
 
 @csrf_protect
@@ -69,6 +69,8 @@ async def session_title(sessions):
             title['title'] = messages[0].user[:35] + '...'
             title['session_id'] = session.session_id
             titles.append(title)
+        else:
+            await Chat_Session(session_id=session.session_id).adelete()
     # print(titles)
     return titles
 
@@ -171,7 +173,7 @@ async def login_view(request):
     user = await aauthenticate(request, username=username, password=password)
     if user is not None:
         await alogin(request, user)
-        return await redirect(chat)
+        return await aredirect(chat)
     else:
         return await arender(request, 'login.html',
                              {'error': 'Invalid username or password!', 'details': user})
