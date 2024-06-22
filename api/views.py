@@ -19,44 +19,23 @@ from asgiref.sync import sync_to_async, async_to_sync
 summarizer = Summarizer()
 
 
-@csrf_protect
-async def index(request):
-    processor = Preprocessor()
-    content = processor.clean(request.POST['content'])
-    print(content)
-    if len(content) <= 10 or len(content) >= 20000:
-        return JsonResponse({"summary": "Can't summarize this!"})
-    text = summarizer.summarize(content)
-    return JsonResponse({"summary": processor.formater(text)})
-
-
-async def test(request):
-    text = await sync_to_async(summarizer.summarize)(summarizer.text)
-    return await sync_to_async(HttpResponse)(Preprocessor().formater(text))
-
-
-async def arender(request, template, context=None):
-    return await sync_to_async(render)(request, template, context)
-
-
-async def aredirect(func):
-    return await sync_to_async(redirect)(func)
+async def home(request):
+    return await arender(request, 'home.html')
 
 
 @csrf_protect
 async def direct_summary(request):
-    processor = Preprocessor()
-    content = await sync_to_async(processor.clean)(request.POST['content'])
+    try:
+        processor = Preprocessor()
+        content = await sync_to_async(processor.clean)(request.POST['content'])
+    except MultiValueDictKeyError:
+        return await arender(request, 'summary.html')
     if len(content) <= 10 or len(content) >= 20000:
-        return await arender(request, 'contextForm.html',
+        return await arender(request, 'summary.html',
                              {'userInput': content, 'summary': "Can't summarize this!"})
 
     text = await sync_to_async(summarizer.summarize)(content)
-    return await arender(request, 'contextForm.html', {'userInput': content, 'summary': processor.formater(text)})
-
-
-async def direct_form(request):
-    return await arender(request, 'contextForm.html')
+    return await arender(request, 'summary.html', {'userInput': content, 'summary': processor.formater(text)})
 
 
 async def session_title(sessions):
@@ -69,9 +48,6 @@ async def session_title(sessions):
             title['title'] = messages[0].user[:35] + '...'
             title['session_id'] = session.session_id
             titles.append(title)
-        # else:
-        #     await Chat_Session(session_id=session.session_id).adelete()
-    # print("titles", titles)
     return titles
 
 
@@ -102,7 +78,10 @@ async def chat(request):
         return message
 
     data = await asyncio.gather(*(format_message(i) for i in data))
-    return await arender(request, 'test.html', {'username': name, 'data': data, 'titles': titles})
+    if len(data)==0:
+        prompts=True
+    else:prompts=False
+    return await arender(request, 'chat.html', {'username': name, 'data': data, 'titles': titles, 'prompts': prompts})
 
 
 @sync_to_async
@@ -183,6 +162,30 @@ async def login_view(request):
 async def logout_view(request):
     await alogout(request)
     return await arender(request, 'login.html', {'message': 'You have been logged out!'})
+
+
+@csrf_protect
+async def index(request):
+    processor = Preprocessor()
+    content = processor.clean(request.POST['content'])
+    print(content)
+    if len(content) <= 10 or len(content) >= 20000:
+        return JsonResponse({"summary": "Can't summarize this!"})
+    text = summarizer.summarize(content)
+    return JsonResponse({"summary": processor.formater(text)})
+
+
+async def test(request):
+    text = await sync_to_async(summarizer.summarize)(summarizer.text)
+    return await sync_to_async(HttpResponse)(Preprocessor().formater(text))
+
+
+async def arender(request, template, context=None):
+    return await sync_to_async(render)(request, template, context)
+
+
+async def aredirect(func):
+    return await sync_to_async(redirect)(func)
 
 
 async def test_html(request):
